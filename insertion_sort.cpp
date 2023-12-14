@@ -28,11 +28,19 @@ void printArray(int arr[], int n)
 
 int main()
 {
-	int arr[] = { 12, 11, 13, 5, 6 };
-	int N = sizeof(arr) / sizeof(arr[0]);
+	int N;
+    cout << "Enter the number of elements in the array: ";
+    cin >> N;
 
-	insertionSort(arr, N);
-	printArray(arr, N);
+    int arr[N];
+    cout << "Enter " << N << " elements:\n";
+    for (int i = 0; i < N; i++)
+        cin >> arr[i];
+
+    insertionSort(arr, N);
+
+    cout << "Sorted array: ";
+    printArray(arr, N);
 
 	return 0;
 }
